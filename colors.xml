@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tiffany_green">#0ABAB5</color>
+    <color name="tiffany_light">#5CE0DB</color>
+    <color name="tiffany_dark">#078C88</color>
+    <color name="champagne_gold">#D4AF37</color>
+    <color name="ice_green_bg">#F0FDFC</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#8A9BA3</color>
+    <color name="glass_white">#BFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="success_green">#10B981</color>
+    <color name="warning_amber">#F59E0B</color>
+    <color name="error_red">#EF4444</color>
+    <color name="stop_red">#EF4444</color>
+</resources>

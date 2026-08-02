@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.3.2" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.gpswalker.app.ui.screens.LoginActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="androidx.health.ACTION_MANAGE_HEALTH_PERMISSIONS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/gpswalker/app/ui/screens/SettingsActivity.kt"
+                            line="149"
+                            column="26"
+                            startOffset="6426"
+                            endLine="149"
+                            endColumn="84"
+                            endOffset="6484"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.string.add_favorite"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="19"
+            column="13"
+            startOffset="845"
+            endLine="19"
+            endColumn="32"
+            endOffset="864"/>
+        <location id="R.string.favorites"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="24"
+            column="13"
+            startOffset="1050"
+            endLine="24"
+            endColumn="29"
+            endOffset="1066"/>
+        <location id="R.color.glass_white"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="10"
+            column="12"
+            startOffset="397"
+            endLine="10"
+            endColumn="30"
+            endOffset="415"/>
+        <location id="R.string.app_version"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="36"
+            column="13"
+            startOffset="1614"
+            endLine="36"
+            endColumn="31"
+            endOffset="1632"/>
+        <location id="R.string.app_name"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="3"
+            column="13"
+            startOffset="63"
+            endLine="3"
+            endColumn="28"
+            endOffset="78"/>
+        <location id="R.string.connected"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="14"
+            column="13"
+            startOffset="605"
+            endLine="14"
+            endColumn="29"
+            endOffset="621"/>
+        <location id="R.string.map"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="23"
+            column="13"
+            startOffset="1015"
+            endLine="23"
+            endColumn="23"
+            endOffset="1025"/>
+        <location id="R.string.go_here"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="18"
+            column="13"
+            startOffset="803"
+            endLine="18"
+            endColumn="27"
+            endOffset="817"/>
+        <location id="R.string.disconnected"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="15"
+            column="13"
+            startOffset="653"
+            endLine="15"
+            endColumn="32"
+            endOffset="672"/>
+        <location id="R.string.cancel"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="20"
+            column="13"
+            startOffset="891"
+            endLine="20"
+            endColumn="26"
+            endOffset="904"/>
+        <location id="R.string.synced"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="16"
+            column="13"
+            startOffset="707"
+            endLine="16"
+            endColumn="26"
+            endOffset="720"/>
+        <entry
+            name="model"
+            string="attr[selectableItemBackgroundBorderless(R)],color[white(U),text_primary(U),text_secondary(U),tiffany_green(U),ice_green_bg(U),success_green(U),champagne_gold(U),stop_red(U),tiffany_light(U),tiffany_dark(D),glass_white(D),warning_amber(U),error_red(U)],drawable[bg_glass_circle(U),bg_glass_panel(U),bg_glass_pill(U),bg_stat_card(U),ic_launcher_background(U),ic_launcher_foreground(U)],id[btnBack(U),etSearchFavorites(U),rvFavorites(U),fabAdd(U),btnGoogleSignIn(U),tvSkip(U),mapView(U),searchInput(U),btnCircle(U),btnSquare(U),btnHexagon(U),searchResultsLayout(U),controlPanel(U),tvSpeed(U),btnStart(U),runningPanel(U),tvRunningTime(U),tvDistance(U),tvSteps(U),tvHealthStatus(U),btnStop(U),navMap(U),navFavorites(U),navSettings(U),tvEmail(U),tvSyncStatus(U),btnSignOut(U),switchHealthSync(U),tvHcStatus(U),btnTestConnection(U),tvStepLength(U),seekStepLength(U),tvMovementSpeed(U),etPlaceName(U),etLatitude(U),etLongitude(U),tvFavName(U),tvFavCoords(U),btnFavDelete(U),tvResultName(U),tvResultAddress(U)],layout[activity_favorites(U),activity_login(U),activity_main(U),activity_settings(U),dialog_add_favorite(U),item_favorite(U),item_search_result(U)],mipmap[ic_launcher(U)],string[my_favorites(U),search_favorites(U),walk_anywhere(U),sign_in_google(U),skip_for_now(U),search_hint(U),speed_label(U),distance_label(U),steps_label(U),health_connect(U),start(U),running_time(U),stop(U),tab_map(U),tab_favorites(U),tab_settings(U),settings(U),sign_out(U),sync_steps_distance(U),test_connection(U),step_length(U),movement_speed(U),about(U),app_name(D),connected(D),disconnected(D),synced(D),go_here(D),add_favorite(D),cancel(D),map(D),favorites(D),account(D),app_version(D),gps_walker_running(U),notification_channel(U),place_name_hint(U)],style[Theme_GPSWalker(U),Theme_GPSWalker_NoActionBar(U),Theme_Material3_Light(R)];3d^1^0^45^2^10^46^3^4,3e^5^4^47^3^1^48^2^49,3f^10^4a^2^3^e^f^4b^4c^4d^6^4e^4^4f^1^50^7^11^8^51^52^53^54,40^1^0^55^2^4^11^3^56^57^58^7^59^5a^5b,42^11^2^3^0,43^2^3,44^12^13,6a^6c^4^9^1^7,6b^6a;;;"/>
+        <location id="R.string.account"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="29"
+            column="13"
+            startOffset="1294"
+            endLine="29"
+            endColumn="27"
+            endOffset="1308"/>
+        <location id="R.color.tiffany_dark"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="5"
+            column="12"
+            startOffset="158"
+            endLine="5"
+            endColumn="31"
+            endOffset="177"/>
+    </map>
+
+</incidents>

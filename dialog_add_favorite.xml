@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/etPlaceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="地點名稱"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/etCoordinates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="十進位座標 (例: 25.033964, 121.564468)"
+        android:inputType="numberDecimal|numberSigned"
+        android:textSize="16sp" />
+</LinearLayout>

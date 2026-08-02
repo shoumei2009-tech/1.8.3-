@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.3.2" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="14"
+            column="36"
+            startOffset="878"
+            endLine="14"
+            endColumn="77"
+            endOffset="919"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="28"/>
+            <entry
+                name="read"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="InlinedApi"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffff8000000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/gpswalker/app/service/MockLocationService.kt"
+            line="177"
+            column="21"
+            startOffset="6942"
+            endLine="177"
+            endColumn="55"
+            endOffset="6976"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffff8000000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Field requires API level 31 (current min is %1$s): `android.location.provider.ProviderProperties#POWER_USAGE_LOW`"/>
+        </map>
+    </incident>
+
+    <incident
+        id="InlinedApi"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffff8000000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/gpswalker/app/service/MockLocationService.kt"
+            line="178"
+            column="21"
+            startOffset="6998"
+            endLine="178"
+            endColumn="53"
+            endOffset="7030"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffff8000000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Field requires API level 31 (current min is %1$s): `android.location.provider.ProviderProperties#ACCURACY_FINE`"/>
+        </map>
+    </incident>
+
+    <incident
+        id="InlinedApi"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffff8000000" requiresApi="ffffffff00000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/gpswalker/app/ui/screens/MainActivity.kt"
+            line="466"
+            column="13"
+            startOffset="18419"
+            endLine="466"
+            endColumn="51"
+            endOffset="18457"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffff8000000"/>
+            <api-levels id="requiresApi"
+                value="ffffffff00000000"/>
+            <entry
+                name="message"
+                string="Field requires API level 33 (current min is %1$s): `android.Manifest.permission#POST_NOTIFICATIONS`"/>
+        </map>
+    </incident>
+
+</incidents>
