@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-mergeDebugResources-52:/layout/item_favorite.xml",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/item_favorite.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-mergeDebugResources-52:/layout/activity_favorites.xml",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_favorites.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-mergeDebugResources-52:/layout/activity_login.xml",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-mergeDebugResources-52:/layout/activity_settings.xml",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-mergeDebugResources-52:/layout/dialog_add_favorite.xml",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/dialog_add_favorite.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-mergeDebugResources-52:/layout/item_search_result.xml",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/item_search_result.xml"
+    },
+    {
+        "merged": "com.gpswalker.app-mergeDebugResources-52:/layout/activity_main.xml",
+        "source": "com.gpswalker.app-main-55:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-mergeDebugResources-52:/layout/activity_main.xml",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/layout_activity_favorites.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_favorites.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/layout_dialog_add_favorite.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/dialog_add_favorite.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/layout_item_search_result.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/item_search_result.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/drawable_bg_glass_pill.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/drawable/bg_glass_pill.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/drawable_bg_stat_card.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/drawable/bg_stat_card.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/drawable_bg_glass_circle.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/drawable/bg_glass_circle.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/layout_activity_login.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/layout_activity_main.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/drawable_bg_glass_panel.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/drawable/bg_glass_panel.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/layout_item_favorite.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/item_favorite.xml"
+    },
+    {
+        "merged": "com.gpswalker.app-debug-53:/layout_activity_main.xml.flat",
+        "source": "com.gpswalker.app-main-55:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/layout_activity_settings.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-debug-53:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/ubuntu/.gradle/daemon/8.7/com.gpswalker.app-main-55:/mipmap-hdpi/ic_launcher.png"
+    }
+]
