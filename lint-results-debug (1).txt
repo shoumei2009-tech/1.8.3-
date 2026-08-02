@@ -1,0 +1,586 @@
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/MainActivity.kt:466: Warning: Field requires API level 33 (current min is 28): android.Manifest.permission#POST_NOTIFICATIONS [InlinedApi]
+            Manifest.permission.POST_NOTIFICATIONS
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/service/MockLocationService.kt:177: Warning: Field requires API level 31 (current min is 28): android.location.provider.ProviderProperties#POWER_USAGE_LOW [InlinedApi]
+                    ProviderProperties.POWER_USAGE_LOW,
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/service/MockLocationService.kt:178: Warning: Field requires API level 31 (current min is 28): android.location.provider.ProviderProperties#ACCURACY_FINE [InlinedApi]
+                    ProviderProperties.ACCURACY_FINE
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InlinedApi":
+   This check scans through all the Android API field references in the
+   application and flags certain constants, such as static final integers and
+   Strings, which were introduced in later versions. These will actually be
+   copied into the class files rather than being referenced, which means that
+   the value is available even when running on older devices. In some cases
+   that's fine, and in other cases it can result in a runtime crash or
+   incorrect behavior. It depends on the context, so consider the code
+   carefully and decide whether it's safe and can be suppressed or whether the
+   code needs to be guarded.
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+/home/ubuntu/GPSWalker/app/build.gradle.kts:40: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.19.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.12.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:41: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:42: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.14.0 [GradleDependency]
+    implementation("com.google.android.material:material:1.11.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:43: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:44: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.11.0 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:45: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.7.0 is available: 2.11.0 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:46: Warning: A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9 [GradleDependency]
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:47: Warning: A newer version of androidx.navigation:navigation-fragment-ktx than 2.7.7 is available: 2.9.8 [GradleDependency]
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:48: Warning: A newer version of androidx.navigation:navigation-ui-ktx than 2.7.7 is available: 2.9.8 [GradleDependency]
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:54: Warning: A newer version of com.google.android.gms:play-services-auth than 21.0.0 is available: 21.6.0 [GradleDependency]
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/build.gradle.kts:57: Warning: A newer version of androidx.health.connect:connect-client than 1.1.0-alpha07 is available: 1.1.0 [GradleDependency]
+    implementation("androidx.health.connect:connect-client:1.1.0-alpha07")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/service/MockLocationService.kt:231: Warning: Provide a timeout when requesting a wakelock with PowerManager.Wakelock.acquire(long timeout). This will ensure the OS will cleanup any wakelocks that last longer than you intend, and will save your user's battery. [WakelockTimeout]
+        wakeLock?.acquire()
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "WakelockTimeout":
+   Wakelocks have two acquire methods: one with a timeout, and one without.
+   You should generally always use the one with a timeout. A typical timeout
+   is 10 minutes. If the task takes longer than it is critical that it happens
+   (i.e. can't use JobScheduler) then maybe they should consider a foreground
+   service instead (which is a stronger run guarantee and lets the user know
+   something long/important is happening).
+
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/FavoritesActivity.kt:123: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+            notifyDataSetChanged()
+            ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+/home/ubuntu/GPSWalker/app/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 28. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:359: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:378: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:397: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompoundDrawables":
+   A LinearLayout which contains an ImageView and a TextView can be more
+   efficiently handled as a compound drawable (a single TextView, using the
+   drawableTop, drawableLeft, drawableRight and/or drawableBottom attributes
+   to draw one or more images adjacent to the text).
+
+   If the two widgets are offset from each other with margins, this can be
+   replaced with a drawablePadding attribute.
+
+   There's a lint quickfix to perform this conversion in the Eclipse plugin.
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:2: Warning: This <FrameLayout> can be replaced with a <merge> tag [MergeRootFrame]
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+
+   Explanation for issues of type "MergeRootFrame":
+   If a <FrameLayout> is the root of a layout and does not provide background
+   or padding etc, it can often be replaced with a <merge> tag which is
+   slightly more efficient. Note that this depends on context, so make sure
+   you understand how the <merge> tag works before proceeding.
+
+   https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:98: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+        <LinearLayout
+         ~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:233: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+        <LinearLayout
+         ~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:351: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout
+     ~~~~~~~~~~~~
+
+   Explanation for issues of type "DisableBaselineAlignment":
+   When a LinearLayout is used to distribute the space proportionally between
+   nested layouts, the baseline alignment property should be turned off to
+   make the layout computation faster.
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_favorites.xml:6: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.GPSWalker) [Overdraw]
+    android:background="@color/white"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_login.xml:5: Warning: Possible overdraw: Root element paints background @color/ice_green_bg with a theme that also paints a background (inferred theme is @style/Theme_GPSWalker_NoActionBar) [Overdraw]
+    android:background="@color/ice_green_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:5: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.GPSWalker) [Overdraw]
+    android:background="@color/white">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/home/ubuntu/GPSWalker/app/src/main/res/values/colors.xml:5: Warning: The resource R.color.tiffany_dark appears to be unused [UnusedResources]
+    <color name="tiffany_dark">#078C88</color>
+           ~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/colors.xml:10: Warning: The resource R.color.glass_white appears to be unused [UnusedResources]
+    <color name="glass_white">#BFFFFFFF</color>
+           ~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:3: Warning: The resource R.string.app_name appears to be unused [UnusedResources]
+    <string name="app_name">GPS Walker</string>
+            ~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:14: Warning: The resource R.string.connected appears to be unused [UnusedResources]
+    <string name="connected">Connected</string>
+            ~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:15: Warning: The resource R.string.disconnected appears to be unused [UnusedResources]
+    <string name="disconnected">Disconnected</string>
+            ~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:16: Warning: The resource R.string.synced appears to be unused [UnusedResources]
+    <string name="synced">Synced</string>
+            ~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:18: Warning: The resource R.string.go_here appears to be unused [UnusedResources]
+    <string name="go_here">傳送到此處</string>
+            ~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:19: Warning: The resource R.string.add_favorite appears to be unused [UnusedResources]
+    <string name="add_favorite">加入最愛</string>
+            ~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:20: Warning: The resource R.string.cancel appears to be unused [UnusedResources]
+    <string name="cancel">取消</string>
+            ~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:23: Warning: The resource R.string.map appears to be unused [UnusedResources]
+    <string name="map">地圖</string>
+            ~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:24: Warning: The resource R.string.favorites appears to be unused [UnusedResources]
+    <string name="favorites">Favorites</string>
+            ~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:29: Warning: The resource R.string.account appears to be unused [UnusedResources]
+    <string name="account">帳號</string>
+            ~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:36: Warning: The resource R.string.app_version appears to be unused [UnusedResources]
+    <string name="app_version">應用程式版本</string>
+            ~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/home/ubuntu/GPSWalker/app/src/main/res/values/strings.xml:7: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="search_hint">搜尋地名或輸入座標...</string>
+                               ~~~~~~~~~~~~
+
+   Explanation for issues of type "TypographyEllipsis":
+   You can replace the string "..." with a dedicated ellipsis character,
+   ellipsis character (u2026, &#8230;). This can help make the text more
+   readable.
+
+   https://en.wikipedia.org/wiki/Ellipsis
+
+/home/ubuntu/GPSWalker/app/src/main/res/mipmap-hdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/home/ubuntu/GPSWalker/app/src/main/res/mipmap-xhdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+/home/ubuntu/GPSWalker/app/src/main/res/mipmap-xxhdpi/ic_launcher.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://d.android.com/r/studio-ui/designer/material/iconography) your
+   launcher icons should "use a distinct silhouette", a "three-dimensional,
+   front view, with a slight perspective as if viewed from above, so that
+   users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+/home/ubuntu/GPSWalker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+/home/ubuntu/GPSWalker/app/src/main/res/mipmap-xxhdpi/ic_launcher.png: Warning: The image ic_launcher.png varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 32x32 dp (48x48 px), mipmap-xhdpi/ic_launcher.png: 24x24 dp (48x48 px), mipmap-xxhdpi/ic_launcher.png: 16x16 dp (48x48 px) [IconDipSize]
+
+   Explanation for issues of type "IconDipSize":
+   Checks the all icons which are provided in multiple densities, all compute
+   to roughly the same density-independent pixel (dip) size. This catches
+   errors where images are either placed in the wrong folder, or icons are
+   changed to new sizes but some folders are forgotten.
+
+/home/ubuntu/GPSWalker/app/src/main/res/mipmap-xxhdpi/ic_launcher.png: Warning: The ic_launcher.png icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-xhdpi, mipmap-xxhdpi [IconDuplicatesConfig]
+
+   Explanation for issues of type "IconDuplicatesConfig":
+   If an icon is provided under different configuration parameters such as
+   drawable-hdpi or -v11, they should typically be different. This detector
+   catches cases where the same icon is provided in different configuration
+   folder which is usually not intentional.
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_favorites.xml:34: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/dialog_add_favorite.xml:8: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:184: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    android:textSize="10sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:252: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    android:textSize="10sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:277: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    android:textSize="10sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:302: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    android:textSize="10sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:326: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    android:textSize="10sp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:374: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                android:textSize="10sp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:393: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                android:textSize="10sp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:412: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                android:textSize="10sp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SmallSp":
+   Avoid using sizes smaller than 11sp.
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_favorites.xml:34: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:26: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/dialog_add_favorite.xml:8: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/dialog_add_favorite.xml:16: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/dialog_add_favorite.xml:25: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_favorites.xml:16: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageButton
+         ~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_favorites.xml:53: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_login.xml:10: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:43: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageButton
+             ~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:53: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageButton
+             ~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:63: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageButton
+             ~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:366: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:385: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:404: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageButton
+             ~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/item_favorite.xml:11: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/item_favorite.xml:40: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageButton
+     ~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/item_search_result.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:57: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvSyncStatus?.text = "Synced"
+                                  ~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:59: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            btnSignOut?.text = "Sign Out"
+                                ~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:68: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvEmail?.text = "Not signed in"
+                             ~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:69: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            tvSyncStatus?.text = "Local mode"
+                                  ~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:70: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            btnSignOut?.text = "Sign In"
+                                ~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:93: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvHcStatus?.text = "Connected"
+                                    ~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:97: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvHcStatus?.text = "Not Authorized"
+                                    ~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:101: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvHcStatus?.text = "Unavailable - Please install Health Connect"
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:105: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                tvHcStatus?.text = "Error"
+                                    ~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:113: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                btnTestConnection.text = "Testing..."
+                                          ~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:127: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    tvHcStatus?.text = "✓ Connected & Working"
+                                        ~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:131: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    tvHcStatus?.text = "✗ Failed"
+                                        ~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/java/com/gpswalker/app/ui/screens/SettingsActivity.kt:174: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvSpeed?.text = "20 km/h"
+                         ~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_login.xml:19: Warning: Hardcoded string "GPS WALKER", should use @string resource [HardcodedText]
+        android:text="GPS WALKER"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:114: Warning: Hardcoded string "20 km/h", should use @string resource [HardcodedText]
+                    android:text="20 km/h"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:135: Warning: Hardcoded string "0.00 km", should use @string resource [HardcodedText]
+                    android:text="0.00 km"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:156: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                    android:text="0"
+                    ~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:177: Warning: Hardcoded string "●", should use @string resource [HardcodedText]
+                    android:text="●"
+                    ~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:227: Warning: Hardcoded string "00:00:00", should use @string resource [HardcodedText]
+            android:text="00:00:00"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:251: Warning: Hardcoded string "Distance", should use @string resource [HardcodedText]
+                    android:text="Distance"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:258: Warning: Hardcoded string "0.00 km", should use @string resource [HardcodedText]
+                    android:text="0.00 km"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:276: Warning: Hardcoded string "Steps", should use @string resource [HardcodedText]
+                    android:text="Steps"
+                    ~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:283: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                    android:text="0"
+                    ~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:301: Warning: Hardcoded string "Speed", should use @string resource [HardcodedText]
+                    android:text="Speed"
+                    ~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:307: Warning: Hardcoded string "20 km/h", should use @string resource [HardcodedText]
+                    android:text="20 km/h"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:325: Warning: Hardcoded string "Health", should use @string resource [HardcodedText]
+                    android:text="Health"
+                    ~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_main.xml:332: Warning: Hardcoded string "---", should use @string resource [HardcodedText]
+                    android:text="---"
+                    ~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:41: Warning: Hardcoded string "帳號 (ACCOUNT)", should use @string resource [HardcodedText]
+            android:text="帳號 (ACCOUNT)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:59: Warning: Hardcoded string "Not signed in", should use @string resource [HardcodedText]
+                android:text="Not signed in"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:67: Warning: Hardcoded string "Local mode", should use @string resource [HardcodedText]
+                android:text="Local mode"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:86: Warning: Hardcoded string "HEALTH CONNECT", should use @string resource [HardcodedText]
+            android:text="HEALTH CONNECT"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:133: Warning: Hardcoded string "Checking...", should use @string resource [HardcodedText]
+                    android:text="Checking..."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:151: Warning: Hardcoded string "移動設定 (MOVEMENT)", should use @string resource [HardcodedText]
+            android:text="移動設定 (MOVEMENT)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:181: Warning: Hardcoded string "0.75 m", should use @string resource [HardcodedText]
+                    android:text="0.75 m"
+                    ~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:214: Warning: Hardcoded string "20 km/h", should use @string resource [HardcodedText]
+                    android:text="20 km/h"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/activity_settings.xml:234: Warning: Hardcoded string "GPS Walker v1.0.0", should use @string resource [HardcodedText]
+            android:text="GPS Walker v1.0.0"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/dialog_add_favorite.xml:12: Warning: Hardcoded string "地點名稱", should use @string resource [HardcodedText]
+        android:hint="地點名稱"
+        ~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/dialog_add_favorite.xml:20: Warning: Hardcoded string "緯度 (例: 25.033964)", should use @string resource [HardcodedText]
+        android:hint="緯度 (例: 25.033964)"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/GPSWalker/app/src/main/res/layout/dialog_add_favorite.xml:29: Warning: Hardcoded string "經度 (例: 121.564468)", should use @string resource [HardcodedText]
+        android:hint="經度 (例: 121.564468)"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 114 warnings

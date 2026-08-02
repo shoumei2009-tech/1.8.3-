@@ -1,0 +1,368 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.gpswalker.app"
+4    android:versionCode="11"
+5    android:versionName="1.5.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="28"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:5:5-79
+11-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:6:5-81
+12-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+13-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:7:5-8:60
+13-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:9:5-67
+14-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:9:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:10:5-79
+15-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:10:22-76
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+16-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:11:5-77
+16-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:11:22-74
+17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+17-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:12:5-86
+17-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:12:22-83
+18    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+18-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:13:5-77
+18-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:13:22-74
+19    <uses-permission
+19-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:14:5-15:38
+20        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+20-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:14:22-78
+21        android:maxSdkVersion="28" />
+21-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:15:9-35
+22    <uses-permission android:name="android.permission.WAKE_LOCK" />
+22-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:16:5-68
+22-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:16:22-65
+23    <uses-permission android:name="android.permission.health.READ_STEPS" />
+23-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:17:5-76
+23-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:17:22-73
+24    <uses-permission android:name="android.permission.health.WRITE_STEPS" />
+24-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:18:5-77
+24-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:18:22-74
+25    <uses-permission android:name="android.permission.health.READ_DISTANCE" />
+25-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:19:5-79
+25-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:19:22-76
+26    <uses-permission android:name="android.permission.health.WRITE_DISTANCE" />
+26-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:20:5-80
+26-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:20:22-77
+27
+28    <queries>
+28-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:88:5-92:15
+29        <package android:name="com.google.android.apps.healthdata" />
+29-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:89:9-70
+29-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:89:18-67
+30        <package android:name="com.google.android.apps.fitness" />
+30-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:90:9-67
+30-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:90:18-64
+31        <package android:name="com.nianticlabs.pikmin" />
+31-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:91:9-58
+31-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:91:18-55
+32    </queries>
+33
+34    <permission
+34-->[androidx.core:core:1.12.0] /home/ubuntu/.gradle/caches/transforms-4/42701a8c6c0f3321b9e244f3d0512098/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+35        android:name="com.gpswalker.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+35-->[androidx.core:core:1.12.0] /home/ubuntu/.gradle/caches/transforms-4/42701a8c6c0f3321b9e244f3d0512098/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+36        android:protectionLevel="signature" />
+36-->[androidx.core:core:1.12.0] /home/ubuntu/.gradle/caches/transforms-4/42701a8c6c0f3321b9e244f3d0512098/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+37
+38    <uses-permission android:name="com.gpswalker.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+38-->[androidx.core:core:1.12.0] /home/ubuntu/.gradle/caches/transforms-4/42701a8c6c0f3321b9e244f3d0512098/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+38-->[androidx.core:core:1.12.0] /home/ubuntu/.gradle/caches/transforms-4/42701a8c6c0f3321b9e244f3d0512098/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+39
+40    <supports-screens
+40-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:9:5-12:40
+41        android:anyDensity="true"
+41-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:10:9-34
+42        android:largeScreens="true"
+42-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:11:9-36
+43        android:normalScreens="true" />
+43-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:12:9-37
+44
+45    <uses-feature
+45-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:14:5-16:36
+46        android:name="android.hardware.location.network"
+46-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:15:9-57
+47        android:required="false" />
+47-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:16:9-33
+48    <uses-feature
+48-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:17:5-19:36
+49        android:name="android.hardware.location.gps"
+49-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:18:9-53
+50        android:required="false" />
+50-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:19:9-33
+51    <uses-feature
+51-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:20:5-22:36
+52        android:name="android.hardware.telephony"
+52-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:21:9-50
+53        android:required="false" />
+53-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:22:9-33
+54    <uses-feature
+54-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:23:5-25:36
+55        android:name="android.hardware.wifi"
+55-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:24:9-45
+56        android:required="false" />
+56-->[org.osmdroid:osmdroid-android:6.1.18] /home/ubuntu/.gradle/caches/transforms-4/8d0cca940f5bede87e182bfd93f33ed8/transformed/osmdroid-android-6.1.18/AndroidManifest.xml:25:9-33
+57
+58    <application
+58-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:22:5-86:19
+59        android:name="com.gpswalker.app.GPSWalkerApp"
+59-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:23:9-37
+60        android:allowBackup="true"
+60-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:24:9-35
+61        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+61-->[androidx.core:core:1.12.0] /home/ubuntu/.gradle/caches/transforms-4/42701a8c6c0f3321b9e244f3d0512098/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+62        android:debuggable="true"
+63        android:extractNativeLibs="false"
+64        android:icon="@mipmap/ic_launcher"
+64-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:25:9-43
+65        android:label="GPS Walker"
+65-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:26:9-35
+66        android:roundIcon="@mipmap/ic_launcher"
+66-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:27:9-48
+67        android:supportsRtl="true"
+67-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:28:9-35
+68        android:theme="@style/Theme.GPSWalker"
+68-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:29:9-47
+69        android:usesCleartextTraffic="true" >
+69-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:30:9-44
+70        <activity
+70-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:32:9-40:20
+71            android:name="com.gpswalker.app.ui.screens.LoginActivity"
+71-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:33:13-53
+72            android:exported="true"
+72-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:34:13-36
+73            android:theme="@style/Theme.GPSWalker.NoActionBar" >
+73-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:35:13-63
+74            <intent-filter>
+74-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:36:13-39:29
+75                <action android:name="android.intent.action.MAIN" />
+75-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:37:17-69
+75-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:37:25-66
+76
+77                <category android:name="android.intent.category.LAUNCHER" />
+77-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:38:17-77
+77-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:38:27-74
+78            </intent-filter>
+79        </activity>
+80        <activity
+80-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:42:9-46:66
+81            android:name="com.gpswalker.app.ui.screens.MainActivity"
+81-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:43:13-52
+82            android:exported="false"
+82-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:44:13-37
+83            android:launchMode="singleTop"
+83-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:45:13-43
+84            android:theme="@style/Theme.GPSWalker.NoActionBar" />
+84-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:46:13-63
+85        <activity
+85-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:48:9-51:66
+86            android:name="com.gpswalker.app.ui.screens.FavoritesActivity"
+86-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:49:13-57
+87            android:exported="false"
+87-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:50:13-37
+88            android:theme="@style/Theme.GPSWalker.NoActionBar" />
+88-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:51:13-63
+89        <activity
+89-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:53:9-56:66
+90            android:name="com.gpswalker.app.ui.screens.SettingsActivity"
+90-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:54:13-56
+91            android:exported="false"
+91-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:55:13-37
+92            android:theme="@style/Theme.GPSWalker.NoActionBar" />
+92-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:56:13-63
+93
+94        <!-- Health Connect permission rationale (Android 13 and below) -->
+95        <activity
+95-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:59:9-66:20
+96            android:name="com.gpswalker.app.ui.screens.HealthRationaleActivity"
+96-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:60:13-63
+97            android:exported="true"
+97-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:61:13-36
+98            android:theme="@style/Theme.GPSWalker.NoActionBar" >
+98-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:62:13-63
+99            <intent-filter>
+99-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:63:13-65:29
+100                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+100-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:64:17-92
+100-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:64:25-89
+101            </intent-filter>
+102        </activity> <!-- Health Connect permission rationale (Android 14+) -->
+103        <activity-alias
+103-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:69:9-78:26
+104            android:name="com.gpswalker.app.ViewPermissionUsageActivity"
+104-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:70:13-55
+105            android:exported="true"
+105-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:71:13-36
+106            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
+106-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:73:13-80
+107            android:targetActivity="com.gpswalker.app.ui.screens.HealthRationaleActivity" >
+107-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:72:13-73
+108            <intent-filter>
+108-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:74:13-77:29
+109                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+109-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:75:17-86
+109-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:75:25-83
+110
+111                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
+111-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:76:17-87
+111-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:76:27-84
+112            </intent-filter>
+113        </activity-alias>
+114
+115        <service
+115-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:80:9-83:40
+116            android:name="com.gpswalker.app.service.MockLocationService"
+116-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:81:13-56
+117            android:exported="false"
+117-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:83:13-37
+118            android:foregroundServiceType="location" />
+118-->/home/ubuntu/GPSWalker/app/src/main/AndroidManifest.xml:82:13-53
+119
+120        <!-- Health Connect permissions are handled via the system Health Connect app -->
+121        <activity
+121-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:23:9-27:75
+122            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+122-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:24:13-93
+123            android:excludeFromRecents="true"
+123-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:25:13-46
+124            android:exported="false"
+124-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:26:13-37
+125            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+125-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:27:13-72
+126        <!--
+127            Service handling Google Sign-In user revocation. For apps that do not integrate with
+128            Google Sign-In, this service will never be started.
+129        -->
+130        <service
+130-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:33:9-37:51
+131            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+131-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:34:13-89
+132            android:exported="true"
+132-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:35:13-36
+133            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+133-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:36:13-107
+134            android:visibleToInstantApps="true" />
+134-->[com.google.android.gms:play-services-auth:21.0.0] /home/ubuntu/.gradle/caches/transforms-4/ff9fc89b0ac0423c5dbf64b23bf06af3/transformed/play-services-auth-21.0.0/AndroidManifest.xml:37:13-48
+135
+136        <activity
+136-->[com.google.android.gms:play-services-base:18.0.1] /home/ubuntu/.gradle/caches/transforms-4/5ed97427fd6d744a5a12aff1a41b5135/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+137            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+137-->[com.google.android.gms:play-services-base:18.0.1] /home/ubuntu/.gradle/caches/transforms-4/5ed97427fd6d744a5a12aff1a41b5135/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+138            android:exported="false"
+138-->[com.google.android.gms:play-services-base:18.0.1] /home/ubuntu/.gradle/caches/transforms-4/5ed97427fd6d744a5a12aff1a41b5135/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+139            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+139-->[com.google.android.gms:play-services-base:18.0.1] /home/ubuntu/.gradle/caches/transforms-4/5ed97427fd6d744a5a12aff1a41b5135/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+140
+141        <meta-data
+141-->[com.google.android.gms:play-services-basement:18.2.0] /home/ubuntu/.gradle/caches/transforms-4/45f72b3f0a1ad7356c4292b5f55d5e92/transformed/play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+142            android:name="com.google.android.gms.version"
+142-->[com.google.android.gms:play-services-basement:18.2.0] /home/ubuntu/.gradle/caches/transforms-4/45f72b3f0a1ad7356c4292b5f55d5e92/transformed/play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+143            android:value="@integer/google_play_services_version" />
+143-->[com.google.android.gms:play-services-basement:18.2.0] /home/ubuntu/.gradle/caches/transforms-4/45f72b3f0a1ad7356c4292b5f55d5e92/transformed/play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+144
+145        <service
+145-->[androidx.health.connect:connect-client:1.1.0-alpha07] /home/ubuntu/.gradle/caches/transforms-4/1b07ee406a59f799098939669190b936/transformed/connect-client-1.1.0-alpha07/AndroidManifest.xml:24:9-32:19
+146            android:name="androidx.health.platform.client.impl.sdkservice.HealthDataSdkService"
+146-->[androidx.health.connect:connect-client:1.1.0-alpha07] /home/ubuntu/.gradle/caches/transforms-4/1b07ee406a59f799098939669190b936/transformed/connect-client-1.1.0-alpha07/AndroidManifest.xml:25:13-96
+147            android:enabled="true"
+147-->[androidx.health.connect:connect-client:1.1.0-alpha07] /home/ubuntu/.gradle/caches/transforms-4/1b07ee406a59f799098939669190b936/transformed/connect-client-1.1.0-alpha07/AndroidManifest.xml:26:13-35
+148            android:exported="true" >
+148-->[androidx.health.connect:connect-client:1.1.0-alpha07] /home/ubuntu/.gradle/caches/transforms-4/1b07ee406a59f799098939669190b936/transformed/connect-client-1.1.0-alpha07/AndroidManifest.xml:27:13-36
+149            <intent-filter>
+149-->[androidx.health.connect:connect-client:1.1.0-alpha07] /home/ubuntu/.gradle/caches/transforms-4/1b07ee406a59f799098939669190b936/transformed/connect-client-1.1.0-alpha07/AndroidManifest.xml:29:13-31:29
+150                <action android:name="androidx.health.platform.client.ACTION_BIND_SDK_SERVICE" />
+150-->[androidx.health.connect:connect-client:1.1.0-alpha07] /home/ubuntu/.gradle/caches/transforms-4/1b07ee406a59f799098939669190b936/transformed/connect-client-1.1.0-alpha07/AndroidManifest.xml:30:17-98
+150-->[androidx.health.connect:connect-client:1.1.0-alpha07] /home/ubuntu/.gradle/caches/transforms-4/1b07ee406a59f799098939669190b936/transformed/connect-client-1.1.0-alpha07/AndroidManifest.xml:30:25-95
+151            </intent-filter>
+152        </service>
+153
+154        <provider
+154-->[androidx.emoji2:emoji2:1.2.0] /home/ubuntu/.gradle/caches/transforms-4/b67a6c6a044cd5aa225bffeca24516cf/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+155            android:name="androidx.startup.InitializationProvider"
+155-->[androidx.emoji2:emoji2:1.2.0] /home/ubuntu/.gradle/caches/transforms-4/b67a6c6a044cd5aa225bffeca24516cf/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+156            android:authorities="com.gpswalker.app.androidx-startup"
+156-->[androidx.emoji2:emoji2:1.2.0] /home/ubuntu/.gradle/caches/transforms-4/b67a6c6a044cd5aa225bffeca24516cf/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+157            android:exported="false" >
+157-->[androidx.emoji2:emoji2:1.2.0] /home/ubuntu/.gradle/caches/transforms-4/b67a6c6a044cd5aa225bffeca24516cf/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+158            <meta-data
+158-->[androidx.emoji2:emoji2:1.2.0] /home/ubuntu/.gradle/caches/transforms-4/b67a6c6a044cd5aa225bffeca24516cf/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+159                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+159-->[androidx.emoji2:emoji2:1.2.0] /home/ubuntu/.gradle/caches/transforms-4/b67a6c6a044cd5aa225bffeca24516cf/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+160                android:value="androidx.startup" />
+160-->[androidx.emoji2:emoji2:1.2.0] /home/ubuntu/.gradle/caches/transforms-4/b67a6c6a044cd5aa225bffeca24516cf/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+161            <meta-data
+161-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/ubuntu/.gradle/caches/transforms-4/68b066c7d167b459a95af36dcf5fee16/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+162                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+162-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/ubuntu/.gradle/caches/transforms-4/68b066c7d167b459a95af36dcf5fee16/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+163                android:value="androidx.startup" />
+163-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/ubuntu/.gradle/caches/transforms-4/68b066c7d167b459a95af36dcf5fee16/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+164            <meta-data
+164-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+165                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+165-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+166                android:value="androidx.startup" />
+166-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+167        </provider>
+168
+169        <uses-library
+169-->[androidx.window:window:1.0.0] /home/ubuntu/.gradle/caches/transforms-4/ac24e0f1e1a73053f1c5f768ce337740/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+170            android:name="androidx.window.extensions"
+170-->[androidx.window:window:1.0.0] /home/ubuntu/.gradle/caches/transforms-4/ac24e0f1e1a73053f1c5f768ce337740/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+171            android:required="false" />
+171-->[androidx.window:window:1.0.0] /home/ubuntu/.gradle/caches/transforms-4/ac24e0f1e1a73053f1c5f768ce337740/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+172        <uses-library
+172-->[androidx.window:window:1.0.0] /home/ubuntu/.gradle/caches/transforms-4/ac24e0f1e1a73053f1c5f768ce337740/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+173            android:name="androidx.window.sidecar"
+173-->[androidx.window:window:1.0.0] /home/ubuntu/.gradle/caches/transforms-4/ac24e0f1e1a73053f1c5f768ce337740/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+174            android:required="false" />
+174-->[androidx.window:window:1.0.0] /home/ubuntu/.gradle/caches/transforms-4/ac24e0f1e1a73053f1c5f768ce337740/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+175
+176        <receiver
+176-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+177            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+177-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+178            android:directBootAware="false"
+178-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+179            android:enabled="true"
+179-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+180            android:exported="true"
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+181            android:permission="android.permission.DUMP" >
+181-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+182            <intent-filter>
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+183                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+184            </intent-filter>
+185            <intent-filter>
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+186                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+187            </intent-filter>
+188            <intent-filter>
+188-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+189                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+190            </intent-filter>
+191            <intent-filter>
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+192                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/ubuntu/.gradle/caches/transforms-4/5e7b44ad9c129de6553cb9fa050409d5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+193            </intent-filter>
+194        </receiver>
+195    </application>
+196
+197</manifest>
